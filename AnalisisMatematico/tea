@@ -1,0 +1,90 @@
+\documentclass[a4paper,10pt,oneside,onecolumn]{article}
+
+\setlength{\textwidth}{150mm}
+\setlength{\textheight}{280mm}
+\setlength{\oddsidemargin}{-0cm}
+%\setlength{\evensidemargin}{28mm}
+\setlength{\topmargin}{-3cm}
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lmodern}
+
+\usepackage{amsmath,amssymb}
+\usepackage{latexsym}
+\usepackage{makebox}
+
+\title{Ejercicios para entregar}
+\author{Facundo E. Beltramo}
+\date{}
+
+\newcommand{\pplus}{\mbox{\textbf{+\makebox[2pt]{+} }} \makebox}
+
+\begin{document}
+
+%\maketitle
+Ejercicios para entregar. programacion II
+\begin{description}
+\item[8.10]\_
+\begin{description}
+\item \textbf{f)}
+\begin{tabbing}
+$f.Xs \doteq$\=$\space(x=0 \rightarrow 1$\\
+\> $\Box \space x>0 \rightarrow f.(x-1)+2\times (x-1)+1$ \\ \>)
+\end{tabbing}
+\item \textbf{g)}\\
+$f.([]) \doteq []\\
+f.(z \vartriangleright(y \vartriangleright( x \vartriangleright Xs))) \doteq x \vartriangleright Xs\\
+f.(Xs) \doteq [0,1] \pplus Xs$
+\end{description}
+\item [8.11]\_
+\begin{description}
+\item \textbf{c)}\\
+$f.(x \triangleright Xs) \doteq Xs.(\#Xs-1)$
+\item \textbf{d)}\\
+$f.(x \triangleright Xs) \doteq (x \triangleright Xs) \uparrow \#Xs$
+\end{description}
+\item [8.13]\_
+\begin{tabbing}
+$area.(h,b,d)\doteq $ \= $ 2\times frente+2\times lado+2\times arriba$ \\
+\>  |[$frente\doteq h\times b$ \\
+\> $ lado\doteq b\times d$ \\
+\> $ arriba\doteq b\times d$ ]|
+\end{tabbing}
+\item [10.2]\_
+\begin{description}
+\item \textbf{i)}\\
+Predicado auxiliar Maximo:\\
+$Maximo.Xs \doteq (\max x : 0 \leqslant x < \#Xs : Xs.x)\\
+ SegMax.Xs \doteq (\max i : 0 \leqslant i < \#Xs \wedge Maximo.Xs \not = Xs.i):Xs.i )$
+\item \textbf{ii)}\\
+$ Sum.Xs \doteq (+ i : 0 \leqslant i < \#Xs : Xs.i) $
+\item \textbf{iv)}\\
+$distintos.Xs \doteq (\forall x,i: 0 \leqslant x<i< \#Xs: Xs.i\not = Xs.x)$
+\end{description}
+\item[10.3]\_
+\begin{description}
+\item \textbf{ii)}\\
+$posmayorTrue.Xs \doteq (\max i:Xs.i:i)$
+\end{description}
+\item[10.4]\_
+\begin{description}
+\item \textbf{iv)}\\
+Dada una lista `Xs' y un numero `n' menor o igual a la cantidad de elementos en `Xs'. $i.n.Xs$ devolvera $true$ si los primeros `n' elementos de `Xs' son iguales.
+\end{description}
+\item[10.6]\_
+\begin{description}
+\item \textbf{i)}\\
+pre: $Xs:[Int]\wedge  \#Xs = 2\times n$\\
+pos: $(Ni:0 \leqslant i<\#Xs:Xs.i= 2\times n)=(Ni:0\leqslant<\#Xs:Xs.i=2\times n+1)$ 
+\item \textbf{iii)}\\
+pre:$Xs:[Int] \wedge k < \#Xs$\\
+pos:$Xs.k = (\max i:0\leqslant i<\#Xs:Xs.i)$\\
+\item \textbf{iv)}\\
+pre:$Xs:[Int] \wedge k < \#Xs$\\
+pos:$(\forall x,i:0\leqslant x,i<\#Xs\wedge Xs.i\leqslant Xs.x \wedge x\leqslant i: x=k)$\\
+\end{description}
+\end{description}
+\end{document}

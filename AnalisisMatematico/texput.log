@@ -1,0 +1,12 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdftex 2013.6.3)  3 JUN 2013 23:04
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+***.tex out.pdf
+
+! Emergency stop.
+<*> *.tex 
+          out.pdf
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
